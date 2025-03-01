@@ -78,8 +78,7 @@ def real_time_stock_monitor(interval=60):
         high_earning_penny_stocks = find_high_earning_penny_stocks()
         alert_text = ""
         for stock, buy_price, stop_loss, target_price in high_earning_penny_stocks:
-            alert_text += f'**{stock}** - Buy at: ₹{buy_price:.2f}, Target: ₹{target_price:.2f}, Stop-Loss: ₹{stop_loss:.2f}
-'
+            alert_text += f'**{stock}** - Buy at: ₹{buy_price:.2f}, Target: ₹{target_price:.2f}, Stop-Loss: ₹{stop_loss:.2f}\n'
         alert_placeholder.markdown(alert_text)
         time.sleep(interval)
 
